@@ -1,0 +1,96 @@
+#lbl_water {
+	color: blue;
+	font-size: 14px;
+}
+
+#lbl_air {
+	color: blue;
+	font-size: 14px;
+}
+
+.drain-on
+{
+	color: red;
+}
+
+.pump-on
+{
+	color: orange;
+}
+
+/*
+ *  water requested level styles
+ */
+#lvl_water_requested contents trough highlight
+{
+	background: blue;
+}
+
+#lvl_air_requested contents trough highlight
+{
+	background: silver;
+}
+
+
+/*
+ *  water actual level styles
+ */
+#lvl_water_actual trough 
+{
+	margin: 10px -10px 0px 0px;
+    min-width: 20px;
+    background-color: white;
+    border-width: 1px;
+    border-color: black;
+}
+
+#lvl_water_actual progress 
+{
+    background-color: blue;
+    min-width: 20px;
+}
+
+#lvl_air_actual trough
+{
+	margin: 10px -10px 0px 0px;
+	min-width: 20px;
+	background-color: white;
+	border-width: 1px;
+	border-color: black;
+}
+
+#lvl_air_actual progress 
+{
+    background-color: silver;
+    min-width: 20px;
+}
+
+
+/*
+ *  launcher button styles
+ */
+
+.launcher {
+	border-radius: 50px;
+	background-color: #009000;
+	background-image: none;
+	border-width: 4px;
+	border-color: white;
+	color: white;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.launcher:disabled {
+	background-color: #f0f0f0;
+}
+
+.launcher:hover {
+	background-color: #00a000;
+}
+
+.launched {
+	background-color: #ff0000;
+	font-size: 14px;
+}
+

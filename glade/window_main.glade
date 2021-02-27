@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.20.0 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkAdjustment" id="adj_air_requested">
+    <property name="upper">1</property>
+    <property name="value">1</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adj_water_requested">
+    <property name="upper">1</property>
+    <property name="value">1</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="width_request">500</property>
+    <property name="height_request">410</property>
+    <property name="can_focus">False</property>
+    <property name="halign">start</property>
+    <property name="valign">start</property>
+    <property name="title" translatable="yes">BRLCS</property>
+    <property name="window_position">center</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="btn_launcher">
+            <property name="label" translatable="yes">LAUNCH</property>
+            <property name="name">btn_launcher</property>
+            <property name="width_request">100</property>
+            <property name="height_request">100</property>
+            <property name="visible">True</property>
+            <property name="app_paintable">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">center</property>
+            <property name="valign">end</property>
+            <signal name="clicked" handler="on_btn_launcher_clicked" swapped="no"/>
+            <style>
+              <class name="launcher"/>
+            </style>
+          </object>
+          <packing>
+            <property name="x">204</property>
+            <property name="y">298</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_water">
+            <property name="name">lbl_water</property>
+            <property name="width_request">80</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="label" translatable="yes">Water (l)</property>
+          </object>
+          <packing>
+            <property name="x">26</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_water_actual">
+            <property name="name">label_water_actual</property>
+            <property name="width_request">80</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">0.00</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkProgressBar" id="lvl_water_actual">
+            <property name="name">lvl_water_actual</property>
+            <property name="width_request">40</property>
+            <property name="height_request">220</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="inverted">True</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="lvl_water_requested">
+            <property name="name">lvl_water_requested</property>
+            <property name="width_request">40</property>
+            <property name="height_request">230</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="orientation">vertical</property>
+            <property name="adjustment">adj_water_requested</property>
+            <property name="inverted">True</property>
+            <property name="show_fill_level">True</property>
+            <property name="fill_level">1</property>
+            <property name="round_digits">2</property>
+            <property name="digits">2</property>
+            <property name="draw_value">False</property>
+            <signal name="value-changed" handler="on_lvl_water_requested_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">70</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_water_requested">
+            <property name="width_request">80</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">0.00</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_air">
+            <property name="name">lbl_air</property>
+            <property name="width_request">80</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="label" translatable="yes">Air (psi)</property>
+          </object>
+          <packing>
+            <property name="x">126</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_air_actual">
+            <property name="name">label_air_actual</property>
+            <property name="width_request">80</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">0.00</property>
+          </object>
+          <packing>
+            <property name="x">105</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkProgressBar" id="lvl_air_actual">
+            <property name="name">lvl_air_actual</property>
+            <property name="width_request">40</property>
+            <property name="height_request">220</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="inverted">True</property>
+          </object>
+          <packing>
+            <property name="x">105</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="lvl_air_requested">
+            <property name="name">lvl_air_requested</property>
+            <property name="width_request">40</property>
+            <property name="height_request">230</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="orientation">vertical</property>
+            <property name="adjustment">adj_air_requested</property>
+            <property name="inverted">True</property>
+            <property name="show_fill_level">True</property>
+            <property name="fill_level">1</property>
+            <property name="round_digits">2</property>
+            <property name="digits">2</property>
+            <property name="draw_value">False</property>
+            <signal name="value-changed" handler="on_lvl_air_requested_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">170</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_air_requested">
+            <property name="width_request">80</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">0.00</property>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid">
+            <property name="name">gridStatusWidget</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkLabel" id="label_pump">
+                <property name="name">label_pump</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_right">8</property>
+                <property name="margin_top">2</property>
+                <property name="label" translatable="yes">Pump:</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkImage" id="img_pump_state">
+                <property name="name">img_pump_state</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">2</property>
+                <property name="margin_right">2</property>
+                <property name="stock">gtk-missing-image</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_pump_description">
+                <property name="name">label_pump_description</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">&lt;description&gt;</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
