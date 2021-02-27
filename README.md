@@ -1,0 +1,2 @@
+# brlcs
+This project is written in C for use on a raspberry pi with an attached touchscreen. The end product is designed                                     to be used during a scout activity, automatically controlling the launch of a plastic bottle rocket. User's can select water level and air pressure                                     for the launch using the sliders and then the underlying logic interfaces with the raspberry pi's input-output ports and attached sensors to control the launch, giving feedback to the users by updating.
